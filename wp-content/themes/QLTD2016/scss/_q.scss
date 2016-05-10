@@ -1,5 +1,4 @@
 body {
-    font-size: 1.8rem;
     height: 100%;
     background: $black;
 }
@@ -29,11 +28,12 @@ a {
 .site-header {
     border-bottom: 5px solid $black;
     background: $white;
+    padding: 35px 3%;
 }
 
 .logo {
     display: inline-block;
-    width: 200px;
+    width: 17rem;
 
     img {
         width: 100%;
@@ -45,6 +45,23 @@ a {
     background: none;
     border: none;
     padding: 0;
+    margin: 0.4rem 5rem 0 0;
+    float: left;
+    outline: none;
+
+    .bar {
+        display: block;
+        height: 0.4rem;
+        width: 4rem;
+        background: $black;
+        margin-bottom: 0.7rem;
+    }
+
+    &:hover {
+        .bar {
+            background: $pink;
+        }
+    }
 }
 
 /* Nav Overlay */
@@ -95,16 +112,37 @@ a {
     a {
         display: block;
         font-size: 10.6rem;
-        font-size: 5.6vw;
+        font-size: 5.4vw;
         color: $black;
         font-family: $primary-font;
         font-weight: 800;
         text-transform: uppercase;
-        letter-spacing: 1.3rem;
+        letter-spacing: 2.4rem;
         padding: 3%;
 
         &:hover {
             color: $white;
+        }
+    }
+}
+
+/* Social Media Icons */
+.social-media-links {
+    margin: 0;
+    padding: 0;
+
+    li {
+        float: left;
+        list-style: none;
+        margin: 0 2.4rem 0 0;
+    }
+
+    a {
+        color: $white;
+        font-size: 2.2rem;
+
+        &:hover {
+            color: $pink;
         }
     }
 }
@@ -117,4 +155,46 @@ a {
 .site-footer {
     background: $black;
     color: $white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10rem 3% 3rem;
+
+    @include responsive("700px") {
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+
+    @include responsive("450px") {
+        padding: 10rem 3% 3rem;
+    }
+
+
+    .q-info {
+        background: url(../img/footer-logo-o.svg) no-repeat top left;
+        background-size: 16.4rem;
+        padding: 4.5rem 0 0 11.8rem;
+        font-size: 1rem;
+        font-family: $secondary-font;
+
+        address {
+            font-style: normal;
+        }
+
+        @include responsive("700px") {
+            margin-bottom: 5rem;
+        }
+    }
+
+    .social-info {
+        .social-media-links {
+            margin-bottom: 15rem;
+        }
+
+        p {
+            font-family: $secondary-font;
+        }
+    }
 }

@@ -14,9 +14,16 @@
     </div><!-- #content -->
 
     <footer id="colophon" class="site-footer" role="contentinfo">
-        <div class="site-info">
-                Footer
-        </div><!-- .site-info -->
+        <div class="q-info">
+            <address>109 Catherine Street<br />
+            Ann Arbor, Michigan 48104</address>
+        </div>
+
+        <div class="social-info">
+            <?php get_template_part('template-parts/social-media-links'); ?>
+
+            <p>&copy; <?php echo date('Y'); ?> Q LTD. All rights reserved.</p>
+        </div>
     </footer><!-- #colophon -->
 
     <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>

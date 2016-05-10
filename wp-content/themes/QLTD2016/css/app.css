@@ -129,7 +129,7 @@ td, th { padding: 0; }
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
-html { box-sizing: border-box; height: 100%; width: 100%; }
+html { box-sizing: border-box; height: 100%; width: 100%; font-size: 62.5%; line-height: 1.5; }
 
 *, *:before, *:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */ box-sizing: inherit; }
 
@@ -154,7 +154,7 @@ html { box-sizing: border-box; height: 100%; width: 100%; }
 .aligncenter { clear: both; display: block; margin-left: auto; margin-right: auto; }
 
 /* Inline Responsive Media Query */
-body { font-size: 1.8rem; height: 100%; background: #000; }
+body { height: 100%; background: #000; }
 
 h1, h2, h3, h4, h5, h6 { text-transform: uppercase; line-height: 1.4; }
 
@@ -165,13 +165,17 @@ a { text-decoration: none; transition: all 0.3s ease; }
 .row.full { max-width: 100%; }
 
 /* Header */
-.site-header { border-bottom: 5px solid #000; background: #fff; }
+.site-header { border-bottom: 5px solid #000; background: #fff; padding: 35px 3%; }
 
-.logo { display: inline-block; width: 200px; }
+.logo { display: inline-block; width: 17rem; }
 
 .logo img { width: 100%; height: auto; }
 
-.nav-toggle { background: none; border: none; padding: 0; }
+.nav-toggle { background: none; border: none; padding: 0; margin: 0.4rem 5rem 0 0; float: left; outline: none; }
+
+.nav-toggle .bar { display: block; height: 0.4rem; width: 4rem; background: #000; margin-bottom: 0.7rem; }
+
+.nav-toggle:hover .bar { background: #c9005d; }
 
 /* Nav Overlay */
 .nav-overlay { display: none; background: #000; position: absolute; top: 0; left: 0; z-index: 99999; }
@@ -189,13 +193,36 @@ a { text-decoration: none; transition: all 0.3s ease; }
 
 .home-nav li.development a:hover { background: #77c7c7; }
 
-.home-nav a { display: block; font-size: 10.6rem; font-size: 5.6vw; color: #000; font-family: "adelle", serif; font-weight: 800; text-transform: uppercase; letter-spacing: 1.3rem; padding: 3%; }
+.home-nav a { display: block; font-size: 10.6rem; font-size: 5.4vw; color: #000; font-family: "adelle", serif; font-weight: 800; text-transform: uppercase; letter-spacing: 2.4rem; padding: 3%; }
 
 .home-nav a:hover { color: #fff; }
+
+/* Social Media Icons */
+.social-media-links { margin: 0; padding: 0; }
+
+.social-media-links li { float: left; list-style: none; margin: 0 2.4rem 0 0; }
+
+.social-media-links a { color: #fff; font-size: 2.2rem; }
+
+.social-media-links a:hover { color: #c9005d; }
 
 .site-content { background: #fff; }
 
 /* Footer */
-.site-footer { background: #000; color: #fff; }
+.site-footer { background: #000; color: #fff; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; padding: 10rem 3% 3rem; }
+
+@media screen and (max-width: 700px) { .site-footer { -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; padding-left: 20%; padding-right: 20%; } }
+
+@media screen and (max-width: 450px) { .site-footer { padding: 10rem 3% 3rem; } }
+
+.site-footer .q-info { background: url(../img/footer-logo-o.svg) no-repeat top left; background-size: 16.4rem; padding: 4.5rem 0 0 11.8rem; font-size: 1rem; font-family: "proxima-nova", sans-serif; }
+
+.site-footer .q-info address { font-style: normal; }
+
+@media screen and (max-width: 700px) { .site-footer .q-info { margin-bottom: 5rem; } }
+
+.site-footer .social-info .social-media-links { margin-bottom: 15rem; }
+
+.site-footer .social-info p { font-family: "proxima-nova", sans-serif; }
 
 /*# sourceMappingURL=app.css.map */

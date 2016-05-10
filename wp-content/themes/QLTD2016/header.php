@@ -41,20 +41,14 @@
                     <a href="#" class="blog-nav">Blog</a>
                 </nav>
 
-                <ul class="social-media-links">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                </ul>
+                <?php get_template_part('template-parts/social-media-links'); ?>
 
             </div>
             <div class="bg-overlay"></div>
 
 
             <header class="site-header">
-                <button class="nav-toggle"><i class="fa fa-bars"></i></button>
+                <button class="nav-toggle"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
 
                 <a href="/" title="home" class="logo"><img src="<?php bloginfo('template_directory'); ?>/img/qltd-logo.svg" alt="Q TLD" /></a>
             </header><!-- #masthead -->
