@@ -26,7 +26,7 @@
         <body <?php body_class(); ?>>
 
             <div class="nav-overlay">
-                <a href="#" class="close">X</a>
+                <a href="#" class="nav-close">X</a>
 
                 <nav>
                     <?php get_template_part('template-parts/primary-nav'); ?>
