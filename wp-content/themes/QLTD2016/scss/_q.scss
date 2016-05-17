@@ -232,8 +232,101 @@ a {
     }
 }
 
+/* Page Content */
 .site-content {
     background: $white;
+}
+
+.body-content {
+    padding: 3%;
+    font-family: $secondary-font;
+    max-width: 80%;
+
+    h2 {
+        font-size: 5rem;
+        font-weight: normal;
+        text-transform: none;
+    }
+
+    p {
+        font-size: 2.3rem;
+    }
+}
+
+.page-title {
+    font-size: 10.6rem;
+    font-size: 7.6vw;
+    margin: 0;
+    padding: 4% 3%;
+    font-family: $primary-font;
+    text-transform: uppercase;
+    border-bottom: 5px solid $black;
+    letter-spacing: 0.2em;
+    color: $white;
+    background: $black;
+
+    .page-design & {
+        background: $pink;
+    }
+}
+
+.full-width-list {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        line-height: 0;
+    }
+
+    a {
+        color: $black;
+        font-family: $primary-font;
+        display: block;
+
+        &:hover {
+            background: $pink;
+            color: $white;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border-top: 4px solid $black;
+    }
+
+    .img-container {
+        background: url(../img/space.jpg) no-repeat center center;
+        background-size: cover;
+        width: 100%;
+        padding: 12%;
+        max-height: 50px;
+        border-top: 4px solid $black;
+    }
+
+    h3 {
+        font-size: 6rem;
+        font-size: 2.8vw;
+        text-transform: none;
+        margin: 0;
+        padding: 1% 3%;
+        letter-spacing: 0.1em;
+        border-top: 4px solid $black;
+    }
+
+    &.img-list {
+        li {
+            line-height: 0;
+        }
+
+        img, .img-container {
+            border-bottom: none;
+            line-height: 0;
+        }
+    }
 }
 
 /* Footer */

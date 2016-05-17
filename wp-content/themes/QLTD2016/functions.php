@@ -154,3 +154,61 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+
+//Page Slug Body Class
+function add_slug_body_class( $classes ) {
+    global $post;
+    if ( isset( $post ) ) {
+        $classes[] = $post->post_type . '-' . $post->post_name;
+    }
+    return $classes;
+}
+add_filter( 'body_class', 'add_slug_body_class' );
+
+
+
+// Our custom post type function
+function create_post_type() {
+
+    register_post_type( 'projects',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Projects' ),
+                'singular_name' => __( 'Project' ),
+                'add_new_item' => __('Add New Project'),
+                'not_found' => __( 'No Projects Found'),
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'projects'),
+        )
+    );
+
+    $labels = array(
+        'name' => _x( 'Clients', 'taxonomy general name' ),
+        'singular_name' => _x( 'Client', 'taxonomy singular name' ),
+        'search_items' =>  __( 'Search Clients' ),
+        'all_items' => __( 'All Clients' ),
+        'edit_item' => __( 'Edit Client' ),
+        'update_item' => __( 'Update Client' ),
+        'add_new_item' => __( 'Add New Client' ),
+        'not_found' => __('No Clients Found'),
+        'menu_name' => __( 'Clients' ),
+    );
+
+    // Now register the taxonomy
+    register_taxonomy('clients',array('projects'), array(
+        'hierarchical' => true,
+        'labels' => $labels,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+        'rewrite' => array( 'slug' => 'clients' ),
+    ));
+}
+
+// Hooking up our function to theme setup
+add_action( 'init', 'create_post_type' );
