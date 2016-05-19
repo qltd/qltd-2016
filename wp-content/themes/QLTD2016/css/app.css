@@ -157,7 +157,7 @@ html { box-sizing: border-box; height: 100%; width: 100%; font-size: 62.5%; line
 /* Modal View */
 .perspective { position: relative; width: 100%; height: 100%; background: black; }
 
-.container { min-height: 100%; position: relative; outline: 1px solid transparent; z-index: 10; -webkit-transform: translateZ(0) translateX(0) rotateY(0deg); /* reset transforms (Chrome bug) */ transform: translateZ(0) translateX(0) rotateY(0deg); background: black url(../img/ds-8bit.gif) no-repeat center center fixed; background-size: cover; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
+.container { min-height: 100%; position: relative; outline: 1px solid transparent; z-index: 10; -webkit-transform: translateZ(0) translateX(0) rotateY(0deg); /* reset transforms (Chrome bug) */ transform: translateZ(0) translateX(0) rotateY(0deg); background: black; }
 
 .container::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 0px; opacity: 0; background: rgba(0, 0, 0, 0.2); /* the transition delay of the height needs to be synced with the container transition time */ transition: opacity 0.4s, height 0s 0.4s; }
 
@@ -177,9 +177,9 @@ html { box-sizing: border-box; height: 100%; width: 100%; font-size: 62.5%; line
 /* Outer Nav */
 .outer-content { position: absolute; height: auto; font-size: 2em; }
 
-.outer-content.vertical { top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); -webkit-transform-style: preserve-3d; transform-style: preserve-3d; }
+.outer-content.vertical { top: 3%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); -webkit-transform-style: preserve-3d; transform-style: preserve-3d; }
 
-.outer-content.left { left: 25%; }
+.outer-content.left { left: 15%; }
 
 .effect-airbnb .container { transition: -webkit-transform 0.4s; transition: transform 0.4s; transition: transform 0.4s, -webkit-transform 0.4s; -webkit-transform-origin: 50% 50%; -ms-transform-origin: 50% 50%; transform-origin: 50% 50%; }
 
@@ -234,15 +234,15 @@ a { text-decoration: none; transition: all 0.3s ease; }
 
 .nav-overlay ul { margin: 0 0 100px 0; padding: 0; }
 
-.nav-overlay a { color: #fff; font-size: 5.5rem; font-size: 3.3vw; font-family: "adelle", serif; text-transform: uppercase; font-weight: bold; letter-spacing: 0.3em; }
+.nav-overlay a { color: #fff; font-size: 5.5rem; font-size: 4.3vh; font-family: "adelle", serif; text-transform: uppercase; font-weight: bold; letter-spacing: 0.3em; }
 
-@media screen and (max-width: 959px) { .nav-overlay a { font-size: 4.8rem; font-size: 6vw; } }
+@media screen and (max-width: 959px) { .nav-overlay a { font-size: 4.8rem; font-size: 6vh; } }
 
 .nav-overlay a:hover { color: #3d393a; }
 
-.nav-overlay .primary-nav a { font-size: 7rem; font-size: 4.2vw; }
+.nav-overlay .primary-nav a { font-size: 7rem; font-size: 6.2vh; }
 
-@media screen and (max-width: 959px) { .nav-overlay .primary-nav a { font-size: 4.8rem; font-size: 8.4vw; } }
+@media screen and (max-width: 959px) { .nav-overlay .primary-nav a { font-size: 4.8rem; font-size: 10vh; } }
 
 .nav-overlay .primary-nav li.design a:hover { color: #c9005d; }
 

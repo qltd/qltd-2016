@@ -13,11 +13,7 @@
     z-index: 10;
     -webkit-transform: translateZ(0) translateX(0) rotateY(0deg); /* reset transforms (Chrome bug) */
     transform: translateZ(0) translateX(0) rotateY(0deg);
-    background: black url(../img/ds-8bit.gif) no-repeat center center fixed;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: black;
 }
 
 .container::after {
@@ -82,7 +78,7 @@
 }
 
 .outer-content.vertical {
-    top: 50%;
+    top: 3%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     -webkit-transform-style: preserve-3d;
@@ -90,7 +86,7 @@
 }
 
 .outer-content.left {
-    left: 25%;
+    left: 15%;
 }
 
 .effect-airbnb .container {

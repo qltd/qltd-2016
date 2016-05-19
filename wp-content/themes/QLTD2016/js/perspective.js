@@ -38,7 +38,7 @@
         clickevent = mobilecheck() ? 'touchstart' : 'click';
 
     function init() {
-        var showMenu = document.getElementsByClassName( 'showMenu' ),
+        var showMenu = document.getElementsByClassName( 'nav-toggle' ),
             perspectiveWrapper = document.getElementById( 'perspective' ),
             container = perspectiveWrapper.querySelector( '.container' ),
             contentWrapper = container.querySelector( '.wrapper' );

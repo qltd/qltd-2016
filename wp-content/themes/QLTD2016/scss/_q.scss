@@ -100,7 +100,7 @@ a {
     a {
         color: $white;
         font-size: 5.5rem;
-        font-size: 3.3vw;
+        font-size: 4.3vh;
         font-family: $primary-font;
         text-transform: uppercase;
         font-weight: bold;
@@ -108,7 +108,7 @@ a {
 
         @include responsive("959px") {
             font-size: 4.8rem;
-            font-size: 6vw;
+            font-size: 6vh;
         }
 
 
@@ -120,11 +120,11 @@ a {
     .primary-nav {
         a {
             font-size: 7rem;
-            font-size: 4.2vw;
+            font-size: 6.2vh;
 
             @include responsive("959px") {
                 font-size: 4.8rem;
-                font-size: 8.4vw;
+                font-size: 10vh;
             }
         }
 
