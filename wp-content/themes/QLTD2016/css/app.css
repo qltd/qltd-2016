@@ -305,13 +305,23 @@ a { text-decoration: none; transition: all 0.3s ease; }
 
 .full-width-list img { width: 100%; height: auto; border-top: 4px solid #000; }
 
-.full-width-list .img-container { background: url(../img/space.jpg) no-repeat center center; background-size: cover; width: 100%; padding: 12%; max-height: 50px; border-top: 4px solid #000; }
+.full-width-list .img-container { width: 100%; padding: 12%; max-height: 50px; border-top: 4px solid #000; }
 
 .full-width-list h3 { font-size: 6rem; font-size: 2.8vw; text-transform: none; margin: 0; padding: 1% 3%; letter-spacing: 0.1em; border-top: 4px solid #000; }
 
 .full-width-list.img-list li { line-height: 0; }
 
 .full-width-list.img-list img, .full-width-list.img-list .img-container { border-bottom: none; line-height: 0; }
+
+.services-provided { font-size: 2.3rem; font-family: "proxima-nova", sans-serif; }
+
+.services-provided h6 { font-size: 2.3rem; margin: 0; text-transform: none; font-weight: normal; }
+
+.services-provided .design { color: #c9005d; }
+
+.services-provided .branding { color: #e26e2c; }
+
+.services-provided .development { color: #77c7c7; }
 
 /* Footer */
 .site-footer { background: #000; color: #fff; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; padding: 10rem 3% 3rem; }

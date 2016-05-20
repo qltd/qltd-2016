@@ -299,8 +299,6 @@ a {
     }
 
     .img-container {
-        background: url(../img/space.jpg) no-repeat center center;
-        background-size: cover;
         width: 100%;
         padding: 12%;
         max-height: 50px;
@@ -326,6 +324,30 @@ a {
             border-bottom: none;
             line-height: 0;
         }
+    }
+}
+
+.services-provided {
+    font-size: 2.3rem;
+    font-family: $secondary-font;
+
+    h6 {
+        font-size: 2.3rem;
+        margin: 0;
+        text-transform: none;
+        font-weight: normal;
+    }
+
+    .design {
+        color: $design;
+    }
+
+    .branding {
+        color: $branding;
+    }
+
+    .development {
+        color: $development;
     }
 }
 

@@ -7,12 +7,13 @@
 
 get_header(); ?>
 
-<h1 class="page-title"><?php the_title(); ?></h1>
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    <h1 class="page-title"><?php the_title(); ?></h1>
 
-<div class="body-content">
-    <h2>The ark.org</h2>
-    <p>Lorem ipsum dolor sit met, consectetur adipiscing elit. Present id imperiet odio. Prior comido lectus a comido ultricies. Quinqué euismod velit sit met leo feugiat, nec posuere mi cursus. Nunc trisomique ut torero vitae tempus. Fusie accumaan ac relit non tempor. Mecenas felis tellus, sollicitudin sit met minibus non, volutpat et rises. Nam est lestés, dictum eu est sed, mollis varius dui. In volutpat erat massa. Suis vel aliquam justo. Vivamus sit met rutrum nibh. Aeneas lagret lectus sed spaden egestas, sed rutrum nibh gravida. Mauris posuere sit smet matris vel pretium. Phasellus in fringilla veilt, vel accumaan turpis. Cras ut ante euismod, fermentum justo vel, congé magna. Morbi convalli non felis sit met efficitur.</p>
-</div>
+    <div class="body-content">
+            <?php the_content(); ?>
+    </div>
+<?php endwhile; endif; ?>
 
 
 <div class="full-width-list">
@@ -33,16 +34,16 @@ get_header(); ?>
 </div>
 
 
-<div class="full-width-list img-list">
+<!-- <div class="full-width-list img-list">
     <ul>
         <li>
-                <img src="<?php bloginfo('template_directory'); ?>/img/space-wide.jpg" />
+            <img src="<?php bloginfo('template_directory'); ?>/img/space-wide.jpg" />
         </li>
        <li>
-                <img src="<?php bloginfo('template_directory'); ?>/img/space-wide.jpg" />
+            <img src="<?php bloginfo('template_directory'); ?>/img/space-wide.jpg" />
         </li>
     </ul>
-</div>
+</div> -->
 
 
 <?php get_footer();

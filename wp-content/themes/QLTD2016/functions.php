@@ -201,11 +201,13 @@ function create_post_type() {
 
     // Now register the taxonomy
     register_taxonomy('clients',array('projects'), array(
+        'public' => true,
         'hierarchical' => true,
         'labels' => $labels,
         'show_ui' => true,
         'show_admin_column' => true,
         'query_var' => true,
+        'description' => false,
         'rewrite' => array( 'slug' => 'clients' ),
     ));
 }
