@@ -214,3 +214,33 @@ function create_post_type() {
 
 // Hooking up our function to theme setup
 add_action( 'init', 'create_post_type' );
+
+/*
+* Gets the ID of the client from the option_name
+ */
+function getClientID($opt){
+    return str_replace('clients_', '', str_replace('_provided_services', '', $opt));
+}
+
+/*
+* Returns a list of clients (terms) based on ID's pertaining to the section (Design, Branding or Dev)
+ */
+function getClients($section){
+    global $wpdb;
+    $IDs = false;
+    $var = '%' . $section . '%';
+    $results = $wpdb->get_results($wpdb->prepare("SELECT option_name FROM $wpdb->options WHERE option_value LIKE %s AND option_name LIKE %s", $var, '%provided_services%'), ARRAY_A );
+    foreach ($results as $o){
+        $IDs .= getClientID($o['option_name']) . ',';
+    }
+
+    $IDs = rtrim($IDs, ",");
+
+    $clients = get_terms( array(
+        'taxonomy' => 'clients',
+        'hide_empty' => true,
+        'include' => $IDs,
+    ));
+
+    return $clients;
+}

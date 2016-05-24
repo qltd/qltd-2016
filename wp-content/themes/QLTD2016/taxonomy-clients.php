@@ -18,7 +18,6 @@ get_header(); ?>
             $services = get_field('provided_services', 'clients_' . $termID);
             $c = 0;
             foreach ($services as $service){
-
                 if ($service == 'Branding'){
                     echo '<span class="branding">';
                 } elseif ($service == 'Design'){

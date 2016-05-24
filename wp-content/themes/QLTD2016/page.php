@@ -16,34 +16,20 @@ get_header(); ?>
 <?php endwhile; endif; ?>
 
 
-<div class="full-width-list">
-    <ul>
-        <li>
-            <a href="#">
-                <img src="<?php bloginfo('template_directory'); ?>/img/space-wide.jpg" />
-                <h3>Project or Client Page ></h3>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <div class="img-container"></div>
-                <h3>Project or Client Page ></h3>
-            </a>
-        </li>
-    </ul>
-</div>
-
-
-<!-- <div class="full-width-list img-list">
-    <ul>
-        <li>
-            <img src="<?php bloginfo('template_directory'); ?>/img/space-wide.jpg" />
-        </li>
-       <li>
-            <img src="<?php bloginfo('template_directory'); ?>/img/space-wide.jpg" />
-        </li>
-    </ul>
-</div> -->
-
+<?php if (get_the_title() == 'Design' || get_the_title() == 'Branding' || get_the_title() == 'Development'): ?>
+    <div class="full-width-list">
+        <ul>
+            <?php $clients = getClients(get_the_title()); ?>
+            <?php foreach ($clients as $client): ?>
+                <li>
+                    <a href="<?php echo get_term_link($client); ?>">
+                        <div class="img-container" style="background: url(<?php echo get_field('featured_image', $client->taxonomy . '_' . $client->term_id)['url']; ?>) no-repeat center center; background-size: cover;"></div>
+                        <h3><?php echo $client->name; ?> ></h3>
+                    </a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+<?php endif; ?>
 
 <?php get_footer();

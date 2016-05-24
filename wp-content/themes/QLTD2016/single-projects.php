@@ -18,17 +18,18 @@ get_header(); ?>
     </div>
 
 
-
-
-<div class="full-width-list img-list">
-    <ul>
-        <?php while(have_rows('images', $post->ID)): the_row(); ?>
-        <li>
-            <img src="<?php echo get_sub_field('image')['url']; ?>" />
-        </li>
-        <?php endwhile; ?>
-    </ul>
-</div>
+    <?php if (have_rows('images', $post->ID)): ?>
+    <div class="full-width-list img-list">
+        <ul>
+            <?php while(have_rows('images', $post->ID)): the_row(); ?>
+            <li>
+                <img src="<?php echo get_sub_field('image')['url']; ?>" />
+            </li>
+            <?php endwhile; ?>
+        </ul>
+    </div>
+    <?php endif; ?>
 
 <?php endwhile; endif; ?>
+
 <?php get_footer();
