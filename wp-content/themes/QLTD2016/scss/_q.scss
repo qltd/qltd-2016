@@ -351,6 +351,34 @@ a {
     }
 }
 
+/* Project Grid */
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .box {
+        flex: 1 1 25%;
+        position: relative;
+    }
+
+    img {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .details {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 /* Footer */
 .site-footer {
     background: $black;

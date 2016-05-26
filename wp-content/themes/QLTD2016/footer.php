@@ -32,12 +32,7 @@
                 <nav>
                     <?php get_template_part('template-parts/primary-nav'); ?>
 
-                    <ul class="secondary-nav">
-                        <li><a href="#">Sub Nav Link</a></li>
-                        <li><a href="#">Sub Nav Link</a></li>
-                        <li><a href="#">Sub Nav Link</a></li>
-                        <li><a href="#">Sub Nav Link</a></li>
-                    </ul>
+                    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'secondary-menu' ) ); ?>
 
                     <a href="#" class="blog-nav">Blog</a>
                 </nav>

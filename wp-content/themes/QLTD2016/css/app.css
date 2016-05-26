@@ -323,6 +323,15 @@ a { text-decoration: none; transition: all 0.3s ease; }
 
 .services-provided .development { color: #77c7c7; }
 
+/* Project Grid */
+.project-grid { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; width: 100%; }
+
+.project-grid .box { -webkit-flex: 1 1 25%; -ms-flex: 1 1 25%; flex: 1 1 25%; position: relative; }
+
+.project-grid img { position: relative; width: 100%; height: auto; }
+
+.project-grid .details { position: absolute; top: 0; height: 100%; width: 100%; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+
 /* Footer */
 .site-footer { background: #000; color: #fff; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; padding: 10rem 3% 3rem; }
 
