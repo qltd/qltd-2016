@@ -23,7 +23,8 @@ get_header(); ?>
         <ul>
             <?php while(have_rows('images', $post->ID)): the_row(); ?>
             <li>
-                <img src="<?php echo get_sub_field('image')['url']; ?>" />
+                <?php $img = get_sub_field('image'); ?>
+                <img src="<?php echo $img['url']; ?>" />
             </li>
             <?php endwhile; ?>
         </ul>
