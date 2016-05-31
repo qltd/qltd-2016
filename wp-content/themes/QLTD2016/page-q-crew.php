@@ -13,8 +13,8 @@ get_template_part('template-parts/content-page'); ?>
     <?php while (have_rows('crew')): the_row();?>
         <div class="box <?php echo strtolower(get_sub_field('hover_theme')); ?>">
             <a href="#<?php echo str_replace(' ', '_', strtolower(get_sub_field('name'))); ?>">
-            <?php $img = get_sub_field('images')[0]['image']['sizes']['square_thumb']; ?>
-            <img src="<?php echo $img; ?>">
+            <?php $img = get_sub_field('images'); ?>
+            <img src="<?php echo $img[0]['image']['sizes']['square_thumb']; ?>">
             <div class="details">
                 <div>
                     <h2><?php the_sub_field('name'); ?></h2>
@@ -37,8 +37,8 @@ get_template_part('template-parts/content-page'); ?>
             <div class="gallery-grid">
                 <?php while(have_rows('images')): the_row(); ?>
                     <div class="box">
-                        <?php $img = get_sub_field('image')['sizes']['square_thumb']; ?>
-                        <img src="<?php echo $img; ?>" />
+                        <?php $img = get_sub_field('image'); ?>
+                        <img src="<?php echo $img['sizes']['square_thumb']; ?>" />
                     </div>
                 <?php endwhile; ?>
             </div>

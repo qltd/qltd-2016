@@ -19,7 +19,8 @@ get_template_part('template-parts/content-page'); ?>
 <div class="project-grid">
     <?php foreach ($projects as $p):?>
         <a href="<?php echo get_permalink($p->ID); ?>" class="box">
-            <img src="<?php echo get_field('featured_image', $p->ID)['sizes']['square_thumb']; ?>">
+            <?php $img = get_field('featured_image', $p->ID); ?>
+            <img src="<?php echo $img['sizes']['square_thumb']; ?>">
             <div class="details">
                 <div>
                     <h2><?php echo $p->post_title; ?></h2>
