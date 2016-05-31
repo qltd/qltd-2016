@@ -244,3 +244,29 @@ function getClients($section){
 
     return $clients;
 }
+
+function formatServices($services){
+    $return = false;
+    if (in_array('Branding', $services)){
+        $return .= '<span class="branding">Branding</span>';
+        if (count($services) >= 3){
+            $return .= ', ';
+        }
+    }
+
+    if (in_array('Design', $services)){
+        if (count($services) >= 2 && !in_array('Development', $services)){
+            $return .= ' & ';
+        }
+        $return .= '<span class="design">Design</span>';
+    }
+
+    if (in_array('Development', $services)){
+        if (count($services) >= 2){
+            $return .= ' & ';
+        }
+        $return .= '<span class="development">Development</span>';
+    }
+
+    return $return;
+}

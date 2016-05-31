@@ -16,19 +16,7 @@ get_header(); ?>
         <h6>Services Provided</h6>
         <?php
             $services = get_field('provided_services', 'clients_' . $termID);
-            $c = 0;
-            foreach ($services as $service){
-                if ($service == 'Branding'){
-                    echo '<span class="branding">';
-                } elseif ($service == 'Design'){
-                    echo '<span class="design">';
-                } elseif ($service == 'Development'){
-                    echo '<span class="development">';
-                }
-                echo $service;
-                echo '</span>';
-                $c++; echo ($c > 0 && $c < count($services)) ? ', ' : '';
-            }
+            echo formatServices($services);
         ?>
     </div>
 </div>
