@@ -41,7 +41,8 @@ get_header(); ?>
         <?php foreach ($projects as $project): ?>
             <li>
                 <a href="<?php echo get_permalink($project->ID); ?>">
-                    <div class="img-container" style="background: url(<?php echo get_field('featured_image', $project->ID)['url']; ?>) no-repeat center center; background-size: cover;"></div>
+                    <?php $featured_image = get_field('featured_image', $project->ID); ?>
+                    <div class="img-container" style="background: url(<?php echo $featured_image['url']; ?>) no-repeat center center; background-size: cover;"></div>
                     <h3><?php echo $project->post_title; ?> ></h3>
                 </a>
             </li>
