@@ -461,7 +461,6 @@ a {
         position: relative;
         max-width: 31%;
         margin: 1%;
-        border: 4px solid $black;
         line-height: 0;
         overflow: hidden;
 
@@ -469,6 +468,8 @@ a {
             position: relative;
             width: 100%;
             height: auto;
+            line-height: 0;
+            border: 4px solid $black;
         }
     }
 }

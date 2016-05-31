@@ -12,6 +12,7 @@ get_template_part('template-parts/content-page'); ?>
 <div class="project-grid">
     <?php while (have_rows('crew')): the_row();?>
         <div class="box <?php echo strtolower(get_sub_field('hover_theme')); ?>">
+            <a href="#<?php echo str_replace(' ', '_', strtolower(get_sub_field('name'))); ?>">
             <?php $img = get_sub_field('images')[0]['image']['sizes']['square_thumb']; ?>
             <img src="<?php echo $img; ?>">
             <div class="details">
@@ -20,6 +21,7 @@ get_template_part('template-parts/content-page'); ?>
                     <h3><?php the_sub_field('title'); ?></h3>
                 </div>
             </div>
+            </a>
         </div>
     <?php endwhile; ?>
 </div>
@@ -27,7 +29,7 @@ get_template_part('template-parts/content-page'); ?>
 
 <div class="crew-section">
     <?php while (have_rows('crew')): the_row();?>
-        <div class="crew-member">
+        <div id="<?php echo str_replace(' ', '_', strtolower(get_sub_field('name'))); ?>" class="crew-member">
             <div class="body-content">
                 <h2><?php the_sub_field('name'); ?> | <span class="<?php echo strtolower(get_sub_field('hover_theme')); ?>"><?php the_sub_field('title'); ?></span></h2>
                 <p><?php the_sub_field('description'); ?></p>
