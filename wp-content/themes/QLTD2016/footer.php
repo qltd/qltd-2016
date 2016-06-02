@@ -27,26 +27,9 @@
             </footer><!-- #colophon -->
         </div> <!-- #wrapper -->
     </div> <!-- #container -->
-    <div class="outer-content left vertical">
-        <div class="nav-overlay">
-                <nav>
-                    <?php get_template_part('template-parts/primary-nav'); ?>
 
-                    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'secondary-menu' ) ); ?>
-
-                    <a href="#" class="blog-nav">Blog</a>
-                </nav>
-
-                <?php get_template_part('template-parts/social-media-links'); ?>
-
-            </div>
-    </div>
-</div><!-- #perspective -->
 
     <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
-    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/visible.min.js"></script>
-    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/classie.js"></script>
-    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/perspective.js"></script>
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/app.js"></script>
     <?php wp_footer(); ?>
 
