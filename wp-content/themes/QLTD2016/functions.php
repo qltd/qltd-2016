@@ -208,7 +208,7 @@ function create_post_type() {
         'show_admin_column' => true,
         'query_var' => true,
         'description' => false,
-        'rewrite' => array( 'slug' => 'clients' ),
+        'rewrite' => array( 'slug' => 'client'),
     ));
 }
 
