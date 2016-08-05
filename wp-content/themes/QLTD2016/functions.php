@@ -208,7 +208,7 @@ function create_post_type() {
         'show_admin_column' => true,
         'query_var' => true,
         'description' => false,
-        'rewrite' => array( 'slug' => 'client'),
+        'rewrite' => array( 'slug' => 'clients'),
     ));
 }
 
@@ -219,7 +219,7 @@ add_action( 'init', 'create_post_type' );
 * Gets the ID of the client from the option_name
  */
 function getClientID($opt){
-    return str_replace('clients_', '', str_replace('_provided_services', '', $opt));
+    return str_replace('clients_', '', str_replace('_services_section', '', $opt));
 }
 
 /*
@@ -229,7 +229,7 @@ function getClients($section){
     global $wpdb;
     $IDs = false;
     $var = '%' . $section . '%';
-    $results = $wpdb->get_results($wpdb->prepare("SELECT option_name FROM $wpdb->options WHERE option_value LIKE %s AND option_name LIKE %s", $var, '%provided_services%'), ARRAY_A );
+    $results = $wpdb->get_results($wpdb->prepare("SELECT option_name FROM $wpdb->options WHERE option_value LIKE %s AND option_name LIKE %s", $var, '%services_section%'), ARRAY_A );
     foreach ($results as $o){
         $IDs .= getClientID($o['option_name']) . ',';
     }
