@@ -12,9 +12,12 @@ get_template_part('template-parts/content-page'); ?>
 <?php
     $args = array(
         'post_type'=> 'projects',
+        'numberposts' => -1,
+        'post_status' => 'publish',
         'order'    => 'ASC'
     );
     $projects = get_posts( $args );
+    echo '<pre>'; print_r(count($projects)); echo '</pre>';
 ?>
 <div class="project-grid">
     <?php foreach ($projects as $p):?>
