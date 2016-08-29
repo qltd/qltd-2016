@@ -21,3 +21,14 @@ navClose[0].addEventListener("click", function(){ toggleNav() });
 bgOverlay[0].addEventListener("click", function(){ toggleNav() });
 
 
+jQuery(document).ready(function(){
+    //back to top button
+    jQuery('.back-to-top-button').click(function(){
+        var $target = jQuery('body');
+        jQuery('html, body').stop().animate({
+                'scrollTop': $target.offset().top
+        }, 900, 'swing',function(){
+            jQuery('.back-to-top-button').fadeOut();
+        });
+    });
+});

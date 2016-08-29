@@ -47,4 +47,5 @@
                 <a href="/" title="home" class="logo"><img src="<?php bloginfo('template_directory'); ?>/img/qltd-logo.svg" alt="Q TLD" /></a>
             </header><!-- #masthead -->
 
+<div class="back-to-top-button"><i class="fa fa-angle-double-up"></i></div>
             <div id="content" class="site-content">
