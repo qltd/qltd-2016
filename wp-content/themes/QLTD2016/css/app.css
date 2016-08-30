@@ -725,11 +725,11 @@ a {
     line-height: 0;
     overflow: hidden; }
     .project-grid .box.development .details {
-      background: rgba(119, 199, 199, 0.8); }
+      background: rgba(0, 0, 0, 0.7); }
     .project-grid .box.branding .details {
-      background: rgba(226, 110, 44, 0.8); }
+      background: rgba(0, 0, 0, 0.7); }
     .project-grid .box.design .details {
-      background: rgba(201, 0, 93, 0.8); }
+      background: rgba(0, 0, 0, 0.7); }
     .project-grid .box:hover .details {
       bottom: 0; }
   .project-grid img {
