@@ -567,3 +567,19 @@ a {
         }
     }
 }
+
+/**
+ * Contact Form
+ *
+ */
+form.wpcf7-form {
+    input, textarea {
+        border: 2px solid $black; 
+        padding:1rem;
+    }
+
+    input[type="submit"] {
+        background: $black; 
+        color: $white;
+    }
+}
