@@ -20,7 +20,6 @@ navToggle[0].addEventListener("click", function(){ toggleNav() });
 navClose[0].addEventListener("click", function(){ toggleNav() });
 bgOverlay[0].addEventListener("click", function(){ toggleNav() });
 
-
 jQuery(document).ready(function(){
     //back to top button
     jQuery('.back-to-top-button').click(function(){
@@ -30,5 +29,13 @@ jQuery(document).ready(function(){
         }, 900, 'swing',function(){
             jQuery('.back-to-top-button').fadeOut();
         });
+    });
+    jQuery(window).scroll(function(){
+        var t = jQuery(window).scrollTop()
+        if(t < 10){
+            jQuery('.back-to-top-button').fadeOut();
+        }else{
+            jQuery('.back-to-top-button').fadeIn();
+        }
     });
 });
