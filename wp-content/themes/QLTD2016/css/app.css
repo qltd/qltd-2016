@@ -623,11 +623,11 @@ a {
   .body-content p {
     font-size: 2.3rem; }
   .body-content span.design {
-    color: #c9005d; }
+    color: #000; }
   .body-content span.development {
-    color: #77c7c7; }
+    color: #000; }
   .body-content span.branding {
-    color: #e26e2c; }
+    color: #000; }
 
 .page-title {
   font-size: 9rem;
